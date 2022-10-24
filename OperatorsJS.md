@@ -171,23 +171,23 @@ let a3 = false && true; // f && t возвращает false
 let a4 = false && (3 == 4); // f && f возвращает false
 let a5 = "Cat" && "Dog"; // t && t возвращает Dog
 let a6 = false && "Cat"; // f && t возвращает fals
-let a7 = "Cat" && false; // t && f возвращает false```
+let a7 = "Cat" && false; // t && f возвращает false ```
 
 Следующий код демонстрирует примеры использования оператора || (логическое ИЛИ).
 
-let o1 = true || true; (t || t возвращает true)
-let o2 = false || true; (f || t возвращает true)
-let o3 = true || false; (t || f возвращает true)
-let o4 = false || (3 == 4); (f || f возвращает false)
-let o5 = "Cat" || "Dog"; (t || t возвращает Cat)
-let o6 = false || "Cat"; (f || t возвращает Cat)
-let o7 = "Cat" || false; (t || f возвращает Cat)
+```let o1 = true || true; // t || t возвращает true
+let o2 = false || true; // f || t возвращает true
+let o3 = true || false; // t || f возвращает true
+let o4 = false || (3 == 4); // f || f возвращает false
+let o5 = "Cat" || "Dog"; // t || t возвращает Cat
+let o6 = false || "Cat"; // f || t возвращает Cat
+let o7 = "Cat" || false; // t || f возвращает Cat ```
 
 Следующий код демонстрирует примеры использования оператора ! (логическое НЕ).
 
-let n1 = !true; (!t возвращает false)
-let n2 = !false; (!f возвращает true)
-let n3 = !"Cat"; (!t возвращает false)
+```let n1 = !true; // !t возвращает false
+let n2 = !false; // !f возвращает true
+let n3 = !"Cat"; // !t возвращает false ```
 
 #### Сокращённая оценка
 
