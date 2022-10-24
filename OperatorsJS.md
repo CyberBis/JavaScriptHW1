@@ -165,29 +165,32 @@ console.log(1 / 2 == 1.0 / 2.0); (возвращает true)
 
 Следующий код демонстрирует примеры использования оператора && (логическое И).
 
-`````let a1 = true && true; // t && t возвращает true
+```let a1 = true && true; // t && t возвращает true
 let a2 = true && false; // t && f возвращает false
 let a3 = false && true; // f && t возвращает false
 let a4 = false && (3 == 4); // f && f возвращает false
 let a5 = "Cat" && "Dog"; // t && t возвращает Dog
 let a6 = false && "Cat"; // f && t возвращает fals
-let a7 = "Cat" && false; // t && f возвращает false````
+let a7 = "Cat" && false; // t && f возвращает false
+```
 
 Следующий код демонстрирует примеры использования оператора || (логическое ИЛИ).
 
-````let o1 = true || true; // t || t возвращает true
+```let o1 = true || true; // t || t возвращает true
 let o2 = false || true; // f || t возвращает true
 let o3 = true || false; // t || f возвращает true
 let o4 = false || (3 == 4); // f || f возвращает false
 let o5 = "Cat" || "Dog"; // t || t возвращает Cat
 let o6 = false || "Cat"; // f || t возвращает Cat
-let o7 = "Cat" || false; // t || f возвращает Cat````
+let o7 = "Cat" || false; // t || f возвращает Cat
+```
 
 Следующий код демонстрирует примеры использования оператора ! (логическое НЕ).
 
-````let n1 = !true; // !t возвращает false
+```let n1 = !true; // !t возвращает false
 let n2 = !false; // !f возвращает true
-let n3 = !"Cat"; // !t возвращает false````
+let n3 = !"Cat"; // !t возвращает false
+```
 
 #### Сокращённая оценка
 
@@ -202,11 +205,15 @@ let n3 = !"Cat"; // !t возвращает false````
 
 В дополнение к операторам сравнения, которые могут использоваться со строковыми значениями, оператор (+) позволяет объединить две строки, возвращая при этом третью строку, которая представляет собой объединение двух строк-операндов:
 
-console.log("my " + "string"); (в консоли выведется строка "my string")
+```console.log("my " + "string"); (в консоли выведется строка "my string")
+
+```
 
 Сокращённый оператор присваивания += также может быть использован для объединения (конкатенации) строк:
 
-let mystring = "alpha"; mystring += "bet"; // получается значение "alphabet" и присваивается mystring.
+```let mystring = "alpha"; mystring += "bet"; // получается значение "alphabet" и присваивается mystring.
+
+```
 
 ## Условный (тернарный) оператор
 
@@ -218,7 +225,9 @@ condition ? val1 : val2
 
 Если condition (условие) - истина, то оператор принимает значение val1. В противном случае оператор принимает значение val2. Вы можете использовать условный оператор во всех случаях, где может быть использован стандартный оператор.
 
-````let status = (age >= 18) ? "adult" : "minor";````
+```let status = (age >= 18) ? "adult" : "minor";
+
+```
 
 Данное выражение присваивает значение "adult" переменной status, если age имеет значение 18 или более. В противном случае переменной status присваивается значение "minor".
 
@@ -228,8 +237,9 @@ condition ? val1 : val2
 
 Например, если a является двумерным массивом, каждая строка которого содержит 10 элементов, то следующий код с использованием оператора запятая позволяет выполнять одновременное приращение двух переменных. Данный код выводит на экран значения диагональных элементов массива:
 
-````for (let i = 0, j = 9; i <= 9; i++, j--)
-document.writeln("a[" + i + "][" + j + "]= " + a[i][j]);````
+```for (let i = 0, j = 9; i <= 9; i++, j--)
+document.writeln("a[" + i + "][" + j + "]= " + a[i][j]);
+```
 
 ## Унарные операторы
 
@@ -239,10 +249,11 @@ document.writeln("a[" + i + "][" + j + "]= " + a[i][j]);````
 
 Оператор delete выполняет удаление объекта, свойства объекта, или элемента массива с заданным индексом. Синтаксис оператора:
 
-````delete objectName;
+```delete objectName;
 delete objectName.property;
 delete objectName[index];
-delete property; // допустимо только внутри with````
+delete property; // допустимо только внутри with
+```
 
 где objectName представляет собой имя объекта, property - свойство объекта, а index - целое число, указывающее на положение (номер позиции) элемента в массиве.
 
@@ -252,7 +263,7 @@ delete property; // допустимо только внутри with````
 
 После применения оператора delete свойство элемента меняется на undefined. Оператор delete возвращает true если выполнение операции возможно; оператор возвращает false, если выполнение операции невозможно.
 
-````x = 42;
+```x = 42;
 let y = 43;
 myobj = new Number();
 myobj.h = 4; // создаём свойство h
@@ -260,7 +271,8 @@ delete x; // возвращает true (можно удалить перемен
 delete y; // возвращает false (нельзя удалить переменную объявленную с помощью let)
 delete Math.PI; // возвращает false (нельзя удалить встроенные свойства)
 delete myobj.h; // возвращает true (можно удалить пользовательские свойства)
-delete myobj; // возвращает true (можно удалить объект объявленный неявно)````
+delete myobj; // возвращает true (можно удалить объект объявленный неявно)
+```
 
 ### УДАЛЕНИЕ ЭЛЕМЕНТОВ МАССИВА
 
@@ -268,19 +280,21 @@ delete myobj; // возвращает true (можно удалить объек
 
 Когда элемент массива удаляется с помощью оператора delete, то из массива удаляется значение данного элемента. В следующем примере элемент trees[3] удалён с помощью оператора delete. Однако, элемент trees[3] остаётся адресуемым и возвращает значение undefined.
 
-````let trees = new Array("redwood", "bay", "cedar", "oak", "maple");
+```let trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 delete trees[3];
 if (3 in trees) {
 // условие не выполняется
-}````
+}
+```
 
 Если вы хотите, чтобы элемент оставался в массиве, но имел значение undefined, то используйте ключевое слово undefined вместо оператора delete. В следующем примере элементу trees[3] присвоено значение undefined, но элемент при этом остаётся в массиве:
 
-````let trees = new Array("redwood", "bay", "cedar", "oak", "maple");
+```let trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 trees[3] = undefined;
 if (3 in trees) {
 // данный блок кода выполняется
-}````
+}
+```
 
 ### Оператор typeof
 
@@ -293,49 +307,56 @@ typeof (operand)
 
 Предположим, вы определяете следующие переменные:
 
-````let myFun = new Function("5 + 2");
+```let myFun = new Function("5 + 2");
 let shape = "round";
 let size = 1;
-let today = new Date();````
+let today = new Date();
+```
 
 Оператор typeof возвращает следующие результаты для этих переменных:
 
-````typeof myFun; // возвращает "function"
+```typeof myFun; // возвращает "function"
 typeof shape; // возвращает "string"
 typeof size; // возвращает "number"
 typeof today; // возвращает "object"
-typeof dontExist; // возвращает "undefined"````
+typeof dontExist; // возвращает "undefined"
+```
 
 Для дескрипторов true и null оператор typeof возвращает следующие результаты:
 
-````typeof true; // возвращает "boolean"
-typeof null; // возвращает "object"````
+```typeof true; // возвращает "boolean"
+typeof null; // возвращает "object"
+```
 
 Для чисел и строк оператор typeof возвращает следующие результаты:
 
-````typeof 62; // возвращает "number"
-typeof 'Hello world'; // возвращает "string"````
+```typeof 62; // возвращает "number"
+typeof 'Hello world'; // возвращает "string"
+```
 
 Для свойств оператор typeof возвращает тип значения данного свойства:
 
-````typeof document.lastModified; // возвращает "string"
+```typeof document.lastModified; // возвращает "string"
 typeof window.length; // возвращает "number"
-typeof Math.LN2; // возвращает "number"````
+typeof Math.LN2; // возвращает "number"
+```
 
 Для методов и функций оператор typeof возвращает следующие результаты:
 
-````typeof blur; // возвращает "function"
+```typeof blur; // возвращает "function"
 typeof eval; // возвращает "function"
 typeof parseInt; // возвращает "function"
-typeof shape.split; // возвращает "function"````
+typeof shape.split; // возвращает "function"
+```
 
 Для встроенных объектов оператор typeof возвращает следующие результаты:
 
-````typeof Date; // возвращает "function"
+```typeof Date; // возвращает "function"
 typeof Function; // возвращает "function"
 typeof Math; // возвращает "object"
 typeof Option; // возвращает "function"
-typeof String; // возвращает "function"````
+typeof String; // возвращает "function"
+```
 
 ### Оператор void
 
@@ -350,12 +371,15 @@ void expression
 
 Следующий код служит примером создания гипертекстовой ссылки, которая бездействует при нажатии на неё пользователем. Когда пользователь нажимает на ссылку, void(0) вычисляется равным undefined, что не приводит ни к каким действиям в JavaScript.
 
-````<A HREF="javascript:void(0)">Нажмите здесь, чтобы ничего не произошло</A>````
+```<A HREF="javascript:void(0)">Нажмите здесь, чтобы ничего не произошло</A>
+
+```
 
 Приведённый ниже код создаёт гипертекстовую ссылку, которая подтверждает отправку формы при клике на ней пользователем:
 
-````<A HREF="javascript:void(document.form.submit())">
-Нажмите здесь, чтобы подтвердить отправку формы</A>````
+```<A HREF="javascript:void(document.form.submit())">
+Нажмите здесь, чтобы подтвердить отправку формы</A>
+```
 
 ## Операторы отношения
 
@@ -372,23 +396,29 @@ propNameOrNumber in objectName
 Некоторые примеры способов использования оператора in:
 
 Массивы
-````let trees = new Array("redwood", "bay", "cedar", "oak", "maple");
+
+```let trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 0 in trees; // возвращает true
 3 in trees; // возвращает true
 6 in trees; // возвращает false
 "bay" in trees; // возвращает false (следует указать индекс элемента массива,
 а не значение элемента)
-"length" in trees; // возвращает true (length является свойством объекта Array)````
+"length" in trees; // возвращает true (length является свойством объекта Array)
+```
 
 Встроенные объекты
-````"PI" in Math; // возвращает true
+
+```"PI" in Math; // возвращает true
 let myString = new String("coral");
-"length" in myString; // возвращает true````
+"length" in myString; // возвращает true
+```
 
 Пользовательские объекты
-````let mycar = {make: "Honda", model: "Accord", year: 1998};
+
+```let mycar = {make: "Honda", model: "Accord", year: 1998};
 "make" in mycar; // возвращает true
-"model" in mycar; // возвращает true````
+"model" in mycar; // возвращает true
+```
 
 ### Оператор instanceof
 
@@ -402,10 +432,11 @@ objectName instanceof objectType
 
 Например, следующий код использует оператор instanceof для проверки того, является ли объект theDay объектом типа Date. Так как theDay действительно является объектом типа Date, то программа выполняет код, содержащийся в утверждении if.
 
-````let theDay = new Date(1995, 12, 17);
+```let theDay = new Date(1995, 12, 17);
 if (theDay instanceof Date) {
 // выполняемый код
-}````
+}
+```
 
 ## Приоритет операторов
 
@@ -433,4 +464,3 @@ if (theDay instanceof Date) {
 | запятая                            | ,                                        |
 
 Более подробная версия данной таблицы, содержащая ссылки и дополнительную информацию по каждому оператору, находится в справочнике JavaScript.
-`````
