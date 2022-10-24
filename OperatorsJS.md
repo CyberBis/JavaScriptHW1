@@ -165,13 +165,13 @@ console.log(1 / 2 == 1.0 / 2.0); (возвращает true)
 
 Следующий код демонстрирует примеры использования оператора && (логическое И).
 
-let a1 = true && true; (t && t возвращает true)
-let a2 = true && false; (t && f возвращает false)
-let a3 = false && true; (f && t возвращает false)
-let a4 = false && (3 == 4); (f && f возвращает false)
-let a5 = "Cat" && "Dog"; (t && t возвращает Dog)
-let a6 = false && "Cat"; (f && t возвращает fals)
-let a7 = "Cat" && false; (t && f возвращает false)
+````let a1 = true && true; // t && t возвращает true
+let a2 = true && false; // t && f возвращает false
+let a3 = false && true; // f && t возвращает false
+let a4 = false && (3 == 4); // f && f возвращает false
+let a5 = "Cat" && "Dog"; // t && t возвращает Dog
+let a6 = false && "Cat"; // f && t возвращает fals
+let a7 = "Cat" && false; // t && f возвращает false```
 
 Следующий код демонстрирует примеры использования оператора || (логическое ИЛИ).
 
@@ -433,3 +433,4 @@ if (theDay instanceof Date) {
 | запятая                            | ,                                        |
 
 Более подробная версия данной таблицы, содержащая ссылки и дополнительную информацию по каждому оператору, находится в справочнике JavaScript.
+````
